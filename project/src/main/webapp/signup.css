@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* Copilot-style animated gradient background */
+  background: linear-gradient(270deg, #0f2027, #2c5364, #1c92d2, #f2fcfe, #1c92d2, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: copilotGradient 15s ease infinite;
+}
+
+@keyframes copilotGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Signup form wider and responsive */
+.signup-container {
+  max-width: 600px;
+  min-width: 320px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(203,32,45,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.signup-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #22223b;
+  gap: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+.signup-form input, .signup-form select {
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e7ff;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+}
+.signup-form input:focus, .signup-form select:focus {
+  border: 1.5px solid #0e9fc7;
+  outline: none;
+}
+.signup-form .submit-btn {
+  margin-top: 0.7rem;
+  background: #cb202d;
+  color: #fff;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.2s;
+}
+.signup-form .submit-btn:hover {
+  background: #e82e0470;
+}
+.signup-form .signin-btn {
+  background: #fff;
+  color: #1c0103;
+  border: 2px solid #5c7474;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.7rem;
+  align-self: flex-start;
+  transition: background 0.2s, color 0.2s;
+}
+.signup-form .signin-btn:hover {
+  background: #cb202d;
+  color: #fff;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+}
+.signup-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.signup-form .submit-btn,
+.signup-form .signin-btn {
+  align-self: unset;
+}
+@media (max-width: 700px) {
+  .signup-container {
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+    min-width: 0;
+  }
+}

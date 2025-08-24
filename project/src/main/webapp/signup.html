@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - FoodExpress</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2 style="color:#cb202d; text-align:center;">Sign Up</h2>
+        <form class="signup-form" action="signupForm">
+            <label>Name:
+                <input type="text" name="name" placeholder="SAJJARAO RAKESH" required>
+            </label>
+            <label>Username:
+                <input type="text" name="username" placeholder="rakesh07" required>
+            </label>
+            <label>Password:
+                <input type="password" name="password" placeholder="Rakesh@123" required>
+            </label>
+            <label>Email:
+                <input type="email" name="email" placeholder="sajjarao@gmail.com" required>
+            </label>
+            <label>Phone Number:
+                <input type="tel" name="phoneNumber" placeholder="9876543210" required>
+            </label>
+            <label>Address:
+                <input type="text" name="address" placeholder="Address" required>
+            </label>
+            <label>Role:
+                <select name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    <option value="restaurant">Restaurant</option>
+                </select>
+            </label>
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="button" class="signin-btn" onclick="window.location.href='signin.html'">Sign In</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 

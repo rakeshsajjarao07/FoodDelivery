@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #fff;
+    color: #1c1c1c;
+}
+.hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+.brand-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+.brand-tagline {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.search-bar {
+    width: 400px;
+    max-width: 90vw;
+    padding: 1rem 1.2rem;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+.search-btn {
+    padding: 1rem 1.5rem;
+    border-radius: 0 30px 30px 0;
+    border: none;
+    background: #ff645a;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.search-btn:hover {
+    background: #e23744;
+}
+.search-note {
+    margin-top: 0.7rem;
+    font-size: 0.95rem;
+    color: #ffeaea;
+    text-shadow: 0 1px 2px #000;
+}
+.popular-areas {
+    margin: 2rem auto 0 auto;
+    max-width: 900px;
+    text-align: center;
+}
+.popular-areas h3 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.area-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.area-item {
+    background: #f8f8f8;
+    border-radius: 20px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    color: #e23744;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.area-item:hover {
+    background: #ffeaea;
+}
+.restaurant-section {
+    max-width: 1200px;
+    margin: 3rem auto 2rem auto;
+    padding: 0 1rem;
+}
+.restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 2rem;
+    justify-content: center;
+}
+.restaurant-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(60,60,60,0.08);
+    width: 100%; /* Full width of grid cell */
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+.restaurant-card:hover {
+  box-shadow: 0 8px 32px rgba(60,60,60,0.18);
+  transform: translateY(-0.3rem) scale(1.03);
+  border: 2px solid #fbfbfb;
+  cursor: pointer;
+}
+.restaurant-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.restaurant-info {
+    padding: 1rem;
+}
+.restaurant-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+.restaurant-cuisine {
+    color: #757575;
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+}
+.restaurant-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+.rating {
+    background: #24963f;
+    color: #fff;
+    border-radius: 12px;
+    padding: 0.2rem 0.7rem;
+    font-weight: 500;
+}
+.footer {
+    background:red ;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    color: black;
+    font-size: 1rem;
+}
+.main-header {
+    width: 100%;
+    background : rgb(249,70,70);
+    box-shadow: 0 2px 8px rgba(60,60,60,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.app-icon {
+    font-size: 2rem;
+}
+.app-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e23744;
+    letter-spacing: 1px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    position: relative;
+}
+.header-link {
+    color : rgb(0,0,0);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+}
+.header-link:hover {
+    background: #000;
+    color: #fff;
+}
+.profile-dropdown-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+.profile-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border: 2px solid #e23744;
+    transition: box-shadow 0.2s;
+}
+.profile-icon:hover, .profile-dropdown-container:focus .profile-icon {
+    box-shadow: 0 0 0 3px #ffeaea;
+}
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    z-index: 1001;
+    min-width: 320px;
+    max-width: 90vw;
+}
+.profile-dropdown-container:hover .profile-dropdown,
+.profile-dropdown-container:focus .profile-dropdown,
+.profile-dropdown-container:focus-within .profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.profile-modal-content {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(60,60,60,0.18);
+    position: relative;
+    animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+.profile-info > div {
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+}
+.profile-modal-content,
+.profile-info {
+    color: rgb(0,0,0);
+}
+
+@media (max-width: 1200px) {
+    .restaurant-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .restaurant-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .main-header {
+        padding: 0.7rem 1rem;
+    }
+    .profile-dropdown {
+        min-width: 220px;
+        top: 44px;
+    }
+    .profile-modal-content {
+        min-width: 180px;
+        padding: 1rem 0.7rem;
+    }
+    .restaurant-list {
+        grid-template-columns: 1fr;
+    }
+    .restaurant-card {
+        width: 95vw;
+    }
+    .search-bar {
+        width: 70vw;
+    }
+} 
